@@ -1,0 +1,57 @@
+---
+title: "Breve EDA en python"
+format: html
+editor: visual
+author: Benji Flores
+---
+
+## Quarto
+
+### Importa librerías de python
+
+Recuerda usar pip install antes
+
+```{python}
+import seaborn as sns
+import pandas as pd
+from sklearn import datasets
+import matplotlib.pyplot as plt
+```
+
+To load it into python, all you have to do is execute the following code:
+
+```{python}
+data = datasets.load_breast_cancer()
+```
+
+```{python}
+data.keys()
+```
+
+```{python}
+def sklearn_to_df(sklearn_dataset):
+    df = pd.DataFrame(sklearn_dataset['data'], columns=sklearn_dataset['feature_names'])
+    df['target'] = pd.Series(sklearn_dataset['target'])
+    return df
+```
+
+
+To use this function and get our dataframe, simply do the following:
+
+```{python}
+cancer_df = sklearn_to_df(datasets.load_breast_cancer())
+cancer_df.head(15)
+```
+
+
+```{python}
+cancer_df.describe()
+```
+```{python}
+
+```
+```{python}
+plt.plot('mean radius', 'mean area', data = cancer_df)
+plt.show()
+```
+

@@ -8,8 +8,9 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
       - breve_analisis_exploratorio.qmd
+      - breve_eda_python.qmd
+      - about.qmd
 
 format:
   html:
