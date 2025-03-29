@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Aprendiendo Ciencia de Datos XD"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - breve_analisis_exploratorio.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+

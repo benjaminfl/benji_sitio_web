@@ -1,0 +1,12 @@
+---
+title: "About"
+---
+
+About this site
+
+Estoy siguiendo un tutorial de como hacer un sitio web 
+con quarto
+
+```{r}
+1 + 1
+```
